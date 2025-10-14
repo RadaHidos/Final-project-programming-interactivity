@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
     background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -256,6 +256,7 @@ a:focus-visible {
 .cta-button:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: var(--shadow-xl);
+    color: white;
 }
 
 .cta-button:active {
@@ -307,6 +308,41 @@ a:focus-visible {
     50% {
         transform: translateY(-20px) rotate(45deg);
     }
+}
+
+/* GALLERY SECTION */
+.gallery{
+    padding-block: var(--space-2xl);
+    background-color: var(--color-bg);
+}
+
+.gallery h2{
+    text-align:center;
+}
+
+.gallery p{
+    text-align: center;
+    margin-block-end: var(--space-2xl);
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: var(--space-lg);
+}
+
+.gallery-image{
+    width: 100%;
+    border-radius: var(--radius-lg);
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+    aspect-ratio: 4/3;
+    object-fit:cover;
+    object-position: center; 
+}
+
+.gallery-image:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
 }
 
 /* ===== FEATURES SECTION ===== */
@@ -378,6 +414,35 @@ a:focus-visible {
     position: relative;
     clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%);
 }
+
+/* ===== PRICING SECTION  ====== */
+
+.price-card {
+    background-color: var(--color-bg);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    
+}
+
+.price-content{
+    
+    align-items:center;
+}
+
+.pricing-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: var(--space-md);
+    background-color: var(--color-surface);
+}
+
+.pricing{
+    padding-block: var(--space-2xl);
+    background-color: var(--color-surface);
+}
+
+
 
 /* ===== ABOUT SECTION ===== */
 .about {

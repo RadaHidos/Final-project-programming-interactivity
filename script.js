@@ -4,7 +4,7 @@ const mainNav = document.querySelector('.main-nav');
 
 mobileToggle.addEventListener('click', () => {
     const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-    
+
     mobileToggle.setAttribute('aria-expanded', !isExpanded);
     mobileToggle.classList.toggle('active');
     mainNav.classList.toggle('active');
@@ -30,12 +30,22 @@ document.addEventListener('click', (e) => {
     }
 });
 
+
+// FAQ:
+const faqQuestions = document.querySelectorAll(".faq-question");
+faqQuestions.forEach(function (question) {
+    question.addEventListener("click", function () {
+        const faqItem = question.parentElement;
+        faqItem.classList.toggle("active");
+    });
+});
+
 // Smooth scroll behavior for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
@@ -44,3 +54,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+

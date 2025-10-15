@@ -34,13 +34,13 @@
     </header>
 
 
-<!-- HER0  -->
+    <!-- HER0  -->
 
     <main>
         <section class="hero" id="home">
             <div class="container hero-content">
                 <div class="hero-text">
-                    <h1>Design that speaks. Code that converts.</h1>
+                    <h1>Design that speaks. <br> Code that converts.</h1>
                     <p class="hero-subheading">We're a bold web design agency crafting digital experiences that blend
                         creativity, clarity, and conversion.</p>
                     <a href="#features" class="cta-button">Let's build your site</a>
@@ -53,7 +53,7 @@
             </div>
         </section>
 
-<!-- FEATURE CARDS  -->
+        <!-- FEATURE CARDS  -->
 
         <section class="features" id="features">
             <div class="container">
@@ -88,14 +88,14 @@
                 </div>
             </div>
         </section>
-        
-        
-<!-- add the gallery section -->
+
+
+        <!-- add the gallery section -->
 
         <section class="gallery">
             <div class="container">
                 <h2>Bold visuals, real results.</h2>
-                <p>Explore our design world — where abstract meets functional.</p>
+                <p class="section-subtitle">Explore our design world — where abstract meets functional.</p>
                 <div class="gallery-grid">
                     <img src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                         class="gallery-image" alt="lady writing on computer">
@@ -114,30 +114,210 @@
         </section>
 
 
-<!-- PRICING PLANS  -->
+        <!-- PRICING PLANS  -->
 
-<section class="pricing" id="pricing">
-    <div class="pricing-container">
-        <div class="cards-grid">
-            <article class="price-card">
-                <div class="price-content">
-                    <h2>$19/mo</h2>
-                
+
+        <!-- PRICING -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+
+                <!-- Section header -->
+
+                <h2>Pricing plan</h2>
+                <p class="section-subtitle">Standard prices for premium services</p>
+
+                <!-- Billing toggle -->
+                <div class="billing-toggle" role="tablist" aria-label="Billing period">
+                    <button class="toggle-btn is-active" role="tab" aria-selected="true">Monthly</button>
+                    <button class="toggle-btn" role="tab" aria-selected="false">Yearly</button>
                 </div>
-                
-              
-            </article>
 
-            <article class="price-card">
-                <h2>$19/mo</h2>
-               </div>
-            </article>
-        </div>
-    </div>
-</section>
+                <!-- Plans -->
+                <div class="plans">
+                    <!-- Basic -->
+                    <article class="plan">
+                        <header class="plan__head">
+                            <h3 class="plan__title">Basic plan</h3>
+                            <p class="plan__price">$19/mo</p>
+                        </header>
+
+                        <ul class="plan__features">
+                            <li class="feature">
+                                <svg class="feature__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span>Feature text goes here</span>
+                            </li>
+                            <li class="feature">
+                                <svg class="feature__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span>Feature text goes here</span>
+                            </li>
+                            <li class="feature">
+                                <svg class="feature__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span>Feature text goes here</span>
+                            </li>
+                        </ul>
+
+                        <footer class="plan__cta">
+                            <a href="#" class="btn btn--primary">Get started</a>
+                        </footer>
+                    </article>
+
+                    <!-- Business -->
+                    <article class="plan">
+                        <header class="plan__head">
+                            <h3 class="plan__title">Business plan</h3>
+                            <p class="plan__price">$29/mo</p>
+                        </header>
+
+                        <ul class="plan__features">
+                            <li class="feature">
+                                <svg class="feature__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span>Feature text goes here</span>
+                            </li>
+                            <li class="feature">
+                                <svg class="feature__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span>Feature text goes here</span>
+                            </li>
+                            <li class="feature">
+                                <svg class="feature__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span>Feature text goes here</span>
+                            </li>
+                            <li class="feature">
+                                <svg class="feature__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span>Feature text goes here</span>
+                            </li>
+                            <li class="feature">
+                                <svg class="feature__icon" aria-hidden="true">
+                                    <use href="#icon-check"></use>
+                                </svg>
+                                <span>Feature text goes here</span>
+                            </li>
+                        </ul>
+
+                        <footer class="plan__cta">
+                            <a href="#" class="btn btn--primary">Get started</a>
+                        </footer>
+                    </article>
+                </div>
+            </div>
+
+            <!-- SVG sprite (one tiny check icon reused) -->
+            <svg width="0" height="0" style="position:absolute">
+                <symbol id="icon-check" viewBox="0 0 24 24">
+                    <path
+                        d="M20.3 5.7a1 1 0 0 1 0 1.4l-10 10a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.4l4.3 4.3 9.3-9.3a1 1 0 0 1 1.4 0z" />
+                </symbol>
+            </svg>
+        </section>
+
+        <!-- FAQ SECTION  -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq-grid">
+                    <div class="faq-intro">
+                        <h2>Got Questions? <br> We’ve Got <span class="gradient-text">Bold</span> Answers.</h2>
+                        <p>
+                            Because working with a web design agency
+                            should feel easy, transparent, and inspiring
+                            — never confusing.
+                        </p>
+                    </div>
+                    <div class="faq-container">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>How long does it take to build a website?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    Every project is unique, but most of our websites are ready within 3–5 weeks. That
+                                    includes design, development, and revisions. If you’re in a hurry, we can create a
+                                    fast-track plan just for you.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What makes your agency different?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    We combine <b>geometric creativity with precise code</b> — meaning your site won’t
+                                    just
+                                    look amazing, it’ll perform flawlessly. We’re all about bold visuals, smooth motion,
+                                    and pixel-perfect detail.
+                                </p>
+                            </div>
+                        </div>
 
 
-<!-- ABOUT SECTION  -->
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Can you redesign my existing website?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    Absolutely! We’ll analyze your current site, keep what works, and rebuild what
+                                    doesn’t. The goal? A vibrant, modern design that truly reflects your brand’s energy.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>Do you handle branding and strategy too?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    Yes! From color palettes and logo design to tone of voice and typography systems, we
+                                    craft complete brand identities that flow perfectly into your web presence.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h3>What’s included in your packages?</h3>
+                                <span class="faq-icon">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    All packages include custom design, responsive development, basic SEO setup, and
+                                    launch support. The difference lies in the scale — from single-page designs to
+                                    full-blown web experiences with animations and advanced features.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ABOUT SECTION  -->
 
         <section class="about" id="about">
             <div class="container">
@@ -157,7 +337,10 @@
     </main>
 
 
-<!-- FOOTER  -->
+
+
+
+    <!-- FOOTER  -->
 
     <footer class="site-footer" id="contact">
         <div class="container footer-content">

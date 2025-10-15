@@ -10,6 +10,74 @@ mobileToggle.addEventListener('click', () => {
     mainNav.classList.toggle('active');
 });
 
+
+
+// hero title, paragraph and button entry
+const slideInRightHero = (entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-in'); 
+      //obs.unobserve(entry.target);             
+    }
+  });
+};
+const observer = new IntersectionObserver(slideInRightHero);
+document.querySelectorAll('.hero-text .scroll-in').forEach(el => observer.observe(el));
+
+
+
+
+
+// fade in all titles
+const fadeInTitle = (entries, obs2) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in'); 
+      //obs1.unobserve(entry.target);             
+    }
+  });
+};
+const observer2 = new IntersectionObserver(fadeInTitle);
+document.querySelectorAll('.fade-inTitle').forEach(el => observer2.observe(el));
+
+
+
+
+
+//slide up the cards
+const slideUpCards = (entries, obs1) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('appear-in'); 
+      //obs1.unobserve(entry.target);             
+    }
+  });
+};
+const observerOptions = {
+        threshold: 0.3,
+      };
+const observer1 = new IntersectionObserver(slideUpCards, observerOptions);
+document.querySelectorAll('.cards-grid .slide-up').forEach(el => observer1.observe(el));
+
+
+
+//slide up the pricing plans
+const slideUpPlans = (entries, obs3) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('rise'); 
+      //obs3.unobserve(entry.target);             
+    }
+  });
+};
+const observerOptions3 = {
+        threshold: 0.3,
+      };
+const observer3 = new IntersectionObserver(slideUpPlans, observerOptions3);
+document.querySelectorAll('.plans .appear-up').forEach(el => observer3.observe(el));
+
+
+
 // Close mobile menu when clicking nav links
 const navLinks = document.querySelectorAll('.main-nav a');
 

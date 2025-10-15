@@ -5,7 +5,6 @@
     padding: 0;
 }
 
-html, body { overflow-x: hidden; }
 
 /* ===== CSS VARIABLES ===== */
 :root {
@@ -143,7 +142,7 @@ a:focus-visible {
     background-color: var(--color-bg);
     border-block-end: 1px solid var(--color-border);
     padding-block: var(--space-md);
-    z-index: 100;
+    z-index: 1000;
     transition: background-color var(--transition-base);
 }
 
@@ -224,6 +223,21 @@ a:focus-visible {
 }
 
 /* ===== HERO SECTION ===== */
+
+/* Base hidden state */
+.hero-text .scroll-in {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  transition-delay: calc(var(--i) * 0.3s);
+}
+
+/* when visible */
+.hero-text .scroll-in.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .hero {
     min-height: calc(100svh - 5rem);
     display: flex;
@@ -272,6 +286,7 @@ a:focus-visible {
     font-size: var(--font-size-lg);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     box-shadow: var(--shadow-md);
+    border:none;
 }
 
 .cta-button:hover {
@@ -367,6 +382,29 @@ a:focus-visible {
 }
 
 /* ===== FEATURES SECTION ===== */
+/* Base hidden state */
+.cards-grid .slide-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  transition-delay: calc(var(--i) * 0.5s);
+}
+
+/* when visible */
+ .cards-grid .slide-up.appear-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-inTitle{
+    opacity:0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-inTitle.fade-in{
+    opacity:1;
+}
+
 .features {
     padding-inline: var(--space-sm);
     padding-block: var(--space-2xl);
@@ -440,6 +478,19 @@ a:focus-visible {
 }
 
 /* ===== PRICING SECTION  ====== */
+
+.plans .appear-up{
+  opacity: 0;
+  transform: translateY(100px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  transition-delay: calc(var(--i) * 0.5s);
+}
+
+/* when visible */
+ .plans .appear-up.rise {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .pricing {
     padding-block: var(--space-2xl);

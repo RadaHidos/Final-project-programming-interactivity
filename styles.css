@@ -709,7 +709,7 @@ a:focus-visible {
 }
 
 
-@media screen and (min-width:700px){
+@media screen and (min-width:900px){
     .faq-intro.is-sticky {
         position: sticky;
         top: 100px;

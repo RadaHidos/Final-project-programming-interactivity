@@ -350,6 +350,17 @@ a:focus-visible {
 }
 
 /* GALLERY SECTION */
+
+.gallery-grid .lazy-image {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* image should load */
+.gallery-grid .lazy-image.loaded {
+    opacity: 1;
+}
+
 .gallery {
     padding-inline: var(--space-sm);
     padding-block: var(--space-2xl);
@@ -670,6 +681,20 @@ a:focus-visible {
 
 /* FAQ  */
 
+/* Base hidden state */
+.faq-container .slide-FAQ {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  transition-delay: calc(var(--i) * 0.3s);
+}
+
+/* when visible */
+.faq-container .slide-FAQ.appear-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .faq-section {
   padding-block: var(--space-3xl);
   padding-inline: var(--space-sm);
@@ -682,6 +707,12 @@ a:focus-visible {
   gap: var(--space-2xl);
   align-items: start;                        
 }
+
+
+.faq-intro.is-sticky {
+        position: sticky;
+        top: 100px;
+      }
 
 .faq-intro h2{
     text-align:left; 

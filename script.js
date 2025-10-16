@@ -123,3 +123,74 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+
+//lazy load images
+
+
+const LazyImages = (entries, obs4) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('loaded'); 
+      obs4.unobserve(entry.target);             
+    }
+  });
+};
+const observerOptions4 = {
+        rootMargin: "50px",
+      };
+const observer4 = new IntersectionObserver(LazyImages, observerOptions4);
+document.querySelectorAll('.gallery-grid .lazy-image').forEach(el => observer4.observe(el));
+
+
+
+//appear FAQ
+const slideInFAQ = (entries, obs5) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('appear-right'); 
+      //obs.unobserve(entry.target);             
+    }
+  });
+};
+const observer5 = new IntersectionObserver(slideInFAQ);
+document.querySelectorAll('.faq-container .slide-FAQ').forEach(el => observer5.observe(el));
+
+
+//sticky title in FAQ section
+const StickyTitle = function (entries, obs6) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-sticky");
+            //observer1.unobserve(entry.target);
+          }
+        });
+      };
+
+const observer6 = new IntersectionObserver(StickyTitle);
+const elements6 = document.querySelectorAll(".faq-intro");
+elements6.forEach((el) => observer6.observe(el));
+
+
+//switch the toggle buttons
+
+const toggleButtons= document.querySelectorAll('.billing-toggle .toggle-btn');
+const prices = document.querySelectorAll('.plan__price');
+toggleButtons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    // Remove active state from all buttons
+    toggleButtons.forEach((b) => {
+      b.classList.remove('is-active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    // Add active state to the clicked one
+    btn.classList.add('is-active');
+    btn.setAttribute('aria-selected', 'true');
+
+    const billingType = btn.textContent.trim().toLowerCase();
+
+    prices.forEach((price) => {
+      const newPrice = price.dataset[billingType];
+      if (newPrice) price.textContent = newPrice;
+    });
+  });
+});

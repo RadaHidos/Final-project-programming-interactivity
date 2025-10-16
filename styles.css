@@ -709,10 +709,13 @@ a:focus-visible {
 }
 
 
-.faq-intro.is-sticky {
+@media screen and (min-width:700px){
+    .faq-intro.is-sticky {
         position: sticky;
         top: 100px;
       }
+}
+
 
 .faq-intro h2{
     text-align:left; 
@@ -738,6 +741,7 @@ a:focus-visible {
   .faq-intro p{
     text-align:center;
   }
+
 }
 
 .faq-container {
@@ -902,6 +906,10 @@ a:focus-visible {
     align-items: center;
 }
 
+.about-text{
+    text-align: left;
+}
+
 .about-text p {
     font-size: var(--font-size-lg);
     color: var(--color-text-muted);
@@ -909,7 +917,7 @@ a:focus-visible {
 
 .about-text h2{
     text-align: left;
-}
+} 
 
 .about-visual {
     aspect-ratio: 1;
@@ -1032,9 +1040,17 @@ a:focus-visible {
         text-align: center;
     }
 
+    .about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    text-align: center;    
+  }
+
     .about-text h2{
         text-align: center;
     }
+    
 
 
     .about-visual {
